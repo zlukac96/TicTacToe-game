@@ -1,0 +1,107 @@
+.kontejner{
+	position: relative;
+	width:300px;
+	height: 300px;
+	border: 4px solid black;
+}
+
+.tabla{
+	position: absolute;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 4px;
+	background-color: black;
+	width:100%;
+	height: 100%;
+}
+
+.polje{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background-color: #2196F3;
+}
+
+.polje:hover{
+	background-color: #095ca2;
+}
+
+.iks{
+	background-color: orange;
+	position: absolute;
+	width: 120%;
+	height: 4px;
+	transform: rotate(45deg);
+	pointer-events: none;
+}
+
+.iks::before{
+	content: '';
+	position: absolute;
+	background-color: orange;
+	width: 100%;
+	height: 4px;
+	transform: rotate(90deg);
+	pointer-events: none;
+}
+
+.oks{
+	border: 4px solid orange;
+	border-radius: 100%;
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	pointer-events: none;
+}
+
+.mrezaLinija{
+	position: absolute;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 4px;
+	width: 100%;
+	height: 100%;
+	background-color: #00000000;
+}
+
+.linijaH{
+	grid-column: 1/4;
+	grid-row: 2/3;
+	align-self: center;
+	background-color: red;
+	height: 2px;
+	width: 98%;
+	margin: auto;
+}
+
+.linijaV{
+	grid-column: 2/3;
+	grid-row: 1/4;
+	justify-self: center;
+	background-color: red;
+	width: 2px;
+	height: 98%;
+	margin: auto;
+}
+
+.linijaK{
+	grid-column: 1/4;
+	grid-row: 2/3;
+	align-self: center;
+	transform: rotate(45deg) scale(1.4, 0.5);
+	background-color: red;
+	height: 4px;
+}
+
+button{
+	margin-top: 20px;
+}
+
+:root {
+  --color1: #62bbd3;
+  --color2: #80c9dd;
+  --color3: #d5eaf0;
+}
